@@ -105,8 +105,6 @@ public class FieldCustomAdapter extends RecyclerView.Adapter<FieldCustomAdapter.
                 showEditFieldDialog(position);
             }
         });
-
-
     }
 
     @Override
@@ -191,10 +189,18 @@ public class FieldCustomAdapter extends RecyclerView.Adapter<FieldCustomAdapter.
                                         txt_fieldDatDas.getText().toString(),
                                         txt_fieldLastDateFertilizer.getText().toString());
 
+                                // Update the ArrayList with the new data
+                                fieldName.set(position, edt_fieldName.getText().toString());
+                                fieldUnitArea.set(position, spin_fieldUnitArea.getSelectedItem().toString());
+                                fieldAreaValue.set(position, spin_fieldAreaValue.getSelectedItem().toString());
+                                fieldDasDat.set(position, txt_fieldDatDas.getText().toString());
+                                fieldLastDateFertilizer.set(position, txt_fieldLastDateFertilizer.getText().toString());
+
+                                // Notify the adapter of the item change at the correct position
+                                notifyItemChanged(position);
+
                                 alertDialog.dismiss();
-                                Toast.makeText(context, "Update successfully!", Toast.LENGTH_SHORT).show();
-                                notifyItemChanged(position);
-                                notifyItemChanged(position);
+                                Toast.makeText(context, "Update successful!", Toast.LENGTH_SHORT).show();
                             }
                         })
                         .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
