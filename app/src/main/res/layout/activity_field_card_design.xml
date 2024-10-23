@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fieldCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/smoothcorner"
+    android:backgroundTint="#2E7D32"
+    android:layout_marginBottom="8dp"
+    android:elevation="4dp"
+    tools:context=".FieldCardDesign">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="RelativeOverlap">
+
+            <TextView
+                android:id="@+id/disp_fieldName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/varelaregular"
+                android:text="@string/_16_characters_max"
+                android:textColor="@color/white"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/disp_fieldAreaValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/disp_fieldName"
+                android:fontFamily="@font/varelaregular"
+                android:text="@string/number"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/disp_fieldUnitArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/disp_fieldName"
+                android:layout_toEndOf="@id/disp_fieldAreaValue"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/varelaregular"
+                android:text="@string/unit"
+                android:textColor="@color/white" />
+
+
+            <LinearLayout
+                android:id="@+id/dateContainerForDATDASandDateForLastFertilizer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/disp_fieldAreaValue"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/disp_dateForDATDAS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/varelaregular"
+                    android:text="@string/mm_dd_yyyy"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/disp_dateForLastFertilizer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/varelaregular"
+                    android:text="@string/mm_dd_yyyy"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnEditField"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/fieldlayoututilitybuttonappearance"
+                android:elevation="4dp"
+                android:foreground="@drawable/baseline_edit_24"
+                android:foregroundGravity="center"
+                android:padding="8dp" />
+
+            <Button
+                android:id="@+id/btnDeleteField"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/fieldlayoututilitybuttonappearance"
+                android:elevation="4dp"
+                android:foreground="@drawable/baseline_delete_24"
+                android:foregroundGravity="center"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/disp_fieldId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/id"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

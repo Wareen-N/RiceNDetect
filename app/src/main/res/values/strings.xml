@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">RiceNDetectWithXML</string>
+    <string name="help">\?</string>
+    <string name="about">ℹ</string>
+    <string name="fields">FIELDS</string>
+    <string name="quick_identify">quick identify</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description_this_app_is_for_the_development_of_the_research_application_made_by_the_students_of_the_prmsu_in_partially_fulfillment_of_bachelor_science_in_computer_science">Description: This app is for the development of the research application made by the students of the PRMSU in partially fulfillment of Bachelor Science in Computer Science</string>
+    <string name="add_new_field">Add new field</string>
+    <string name="dat_das">DAT/DAS</string>
+    <string name="selected_date">Selected Date</string>
+    <string name="last_date_fertilizer_application">Last date fertilizer application</string>
+    <string name="confirm">Confirm</string>
+    <string name="attach_from_gallery">Attach from Gallery</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="field_size_per">Field size per</string>
+    <string name="add_new_fields">Add new Fields</string>
+    <string name="fields1">FIELDS</string>
+    <string name="last_fertilizer_application">Last fertilizer application</string>
+    <string name="result">Result</string>
+    <string name="quick_identify1">Quick Identify</string>
+    <string name="id">id</string>
+    <string name="number">number</string>
+    <string name="unit">unit</string>
+    <string name="mm_dd_yyyy">MM/dd/yyyy</string>
+    <string name="_16_characters_max">16 characters max</string>
+
+    <string-array name="unitArea">
+        <item>sqm</item>
+        <item>hr</item>
+    </string-array>
+
+</resources>

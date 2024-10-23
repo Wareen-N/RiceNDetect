@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:id="@+id/homelayout"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/headerbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btnhelp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/circlebutton"
+            android:text="@string/help"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btnabout"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/circlebutton"
+            android:text="@string/about"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ourlogomain" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        >
+
+        <Button
+            android:id="@+id/btnfields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:background="#2E7D32"
+            android:fontFamily="@font/varelaregular"
+            android:text="@string/fields"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/btnquickidentify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2E7D32"
+            android:fontFamily="@font/varelaregular"
+            android:text="@string/quick_identify"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
