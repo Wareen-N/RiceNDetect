@@ -131,11 +131,9 @@ public class FieldCustomAdapter extends RecyclerView.Adapter<FieldCustomAdapter.
     }
 
     private void showEditFieldDialog(int position) {
-        // Inflate the custom layout
         LayoutInflater inflater = LayoutInflater.from(context);
         View dialogView = inflater.inflate(R.layout.fieldadderlayout, null);
 
-        // Initialize the dialog elements from the layout
         EditText edt_fieldName = dialogView.findViewById(R.id.disp_fieldName);
         TextView txt_layoutTitle = dialogView.findViewById(R.id.layoutTitle);
         Spinner spin_fieldUnitArea = dialogView.findViewById(R.id.unitArea);

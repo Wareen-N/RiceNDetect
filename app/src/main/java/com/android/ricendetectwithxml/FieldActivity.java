@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -197,7 +198,8 @@ public class FieldActivity extends AppCompatActivity {
     public void storeFieldDataInArrayList(){
         Cursor cursor = fieldDB.readAllFieldData();
         if(cursor.getCount() == 0){
-            Toast.makeText(this, "No Field Data", Toast.LENGTH_SHORT).show();
+            ImageView imv_noData = findViewById(R.id.imv_noData);
+            imv_noData.setVisibility(View.VISIBLE);
         }else{
             while(cursor.moveToNext()){
                 fieldId.add(cursor.getString(0));

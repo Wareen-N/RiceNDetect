@@ -27,6 +27,7 @@
     <string name="unit">unit</string>
     <string name="mm_dd_yyyy">MM/dd/yyyy</string>
     <string name="_16_characters_max">16 characters max</string>
+    <string name="how_to_add_field">How to \'Add Field\'</string>
 
     <string-array name="unitArea">
         <item>sqm</item>
