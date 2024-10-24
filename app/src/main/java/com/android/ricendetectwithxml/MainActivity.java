@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
     private void showAboutDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        builder.setTitle("About RiceNDetect")
+        builder.setTitle("About")
                 .setMessage("Description: This app is for the development of the research application made by the students of the PRMSU in partially fulfillment of Bachelor Science in Computer Science\n\n\n" +
                         "Email:hunsendrake@gmail.com\n" +
                         "Contact info:09065904571\n\n\n" +
