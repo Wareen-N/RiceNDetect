@@ -196,11 +196,12 @@ public class FieldActivity extends AppCompatActivity {
     }
 
     public void storeFieldDataInArrayList(){
+        ImageView imv_noData = findViewById(R.id.imv_noData);
         Cursor cursor = fieldDB.readAllFieldData();
         if(cursor.getCount() == 0){
-            ImageView imv_noData = findViewById(R.id.imv_noData);
             imv_noData.setVisibility(View.VISIBLE);
         }else{
+            imv_noData.setVisibility(View.INVISIBLE);
             while(cursor.moveToNext()){
                 fieldId.add(cursor.getString(0));
                 fieldName.add(cursor.getString(1));

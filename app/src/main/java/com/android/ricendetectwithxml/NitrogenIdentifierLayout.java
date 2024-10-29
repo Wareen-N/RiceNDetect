@@ -13,10 +13,12 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,6 +38,7 @@ public class NitrogenIdentifierLayout extends AppCompatActivity {
     private TextView txt_DATOrDASDate;
     private TextView txt_fertilizerApplicationDate;
     private Button btn_confirm;
+    private ImageView imv_historyOpener;
 
     public String fieldId, fieldName, fieldUnitArea, fieldAreaValue, fieldDasDat, fieldLastDateFertilizer;
     public TextView txt_layoutTitle;
@@ -54,6 +57,18 @@ public class NitrogenIdentifierLayout extends AppCompatActivity {
         txt_fertilizerApplicationDate = findViewById(R.id.lastFertilizerApplicationDate);
         btn_confirm = findViewById(R.id.btnConfirmIdentify);
         txt_layoutTitle = findViewById(R.id.fieldTitle);
+        imv_historyOpener = findViewById(R.id.imv_historyOpener);
+
+        imv_historyOpener.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LinearLayout ll_dateDetails = findViewById(R.id.ll_dateDetails);
+                ll_dateDetails.setVisibility(View.VISIBLE);
+
+
+                imv_historyOpener.setBackground(ContextCompat.getDrawable(NitrogenIdentifierLayout.this, R.drawable.baseline_keyboard_arrow_up_24));
+            }
+        });
 
         txt_DATOrDASDate.setOnClickListener(v -> {
             isInDATorDAS = true;
