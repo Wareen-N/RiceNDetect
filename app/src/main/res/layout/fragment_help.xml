@@ -53,7 +53,6 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="8dp"
             android:background="#2E7D32"
-
             android:fontFamily="@font/varelaregular"
             android:padding="10dp"
             android:text="How to delete field"
@@ -78,7 +77,6 @@
             android:layout_marginVertical="8dp"
             android:background="#2E7D32"
             android:fontFamily="@font/varelaregular"
-
             android:padding="10dp"
             android:text="how to use 'quick identify'"
             android:textColor="@color/white" />

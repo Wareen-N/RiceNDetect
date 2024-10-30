@@ -28,6 +28,20 @@
     <string name="mm_dd_yyyy">MM/dd/yyyy</string>
     <string name="_16_characters_max">16 characters max</string>
     <string name="how_to_add_field">How to \'Add Field\'</string>
+    <string name="_12th_leaf">12th leaf</string>
+    <string name="_11th_leaf">11th leaf</string>
+    <string name="_10th_leaf">10th leaf</string>
+    <string name="_9th_leaf">9th leaf</string>
+    <string name="_8th_leaf">8th leaf</string>
+    <string name="_7th_leaf">7th leaf</string>
+    <string name="_6th_leaf">6th leaf</string>
+    <string name="_5th_leaf">5th leaf</string>
+    <string name="_4th_leaf">4th leaf</string>
+    <string name="_3rd_leaf">3rd leaf</string>
+    <string name="_2nd_leaf">2nd leaf</string>
+    <string name="_1st_leaf">1st leaf</string>
+    <string name="history">History</string>
+    <string name="click_to_the_boxes_to_upload_a_picture">*click to the boxes to upload a picture</string>
 
     <string-array name="unitArea">
         <item>sqm</item>

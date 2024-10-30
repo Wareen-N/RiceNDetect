@@ -50,33 +50,58 @@ public class MainActivity extends AppCompatActivity {
         builder.setView(inflatedLayout);
 
         // Optionally, you can add buttons if needed
-        builder.setPositiveButton("Close", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
+        builder.setPositiveButton("Close", (dialog, which) -> dialog.dismiss());
 
         // Create and show the dialog
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
 
         Button btn_howAddField = inflatedLayout.findViewById(R.id.btn_howAddField);
-        btn_howAddField.setOnClickListener(new View.OnClickListener() {
+        btn_howAddField.setOnClickListener(v -> {
+
+            alertDialog.dismiss();
+            LayoutInflater inflater1 = LayoutInflater.from(MainActivity.this);
+            View inflatedLayout1 = inflater1.inflate(R.layout.add_field_help_layout, null);
+
+            AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+            builder1.setView(inflatedLayout1);
+
+            builder1.setPositiveButton("Close", (dialog, which) -> dialog.dismiss());
+
+            AlertDialog alertDialog1 = builder1.create();
+            alertDialog1.show();
+        });
+
+        Button btn_howEditFIeld = inflatedLayout.findViewById(R.id.btneditfield);
+        btn_howEditFIeld.setOnClickListener(v -> {
+            alertDialog.dismiss();
+            LayoutInflater inflater1 = LayoutInflater.from(MainActivity.this);
+            View inflatedLayout1 = inflater1.inflate(R.layout.edit_field_help_layout, null);
+
+            AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+            builder1.setView(inflatedLayout1);
+
+            builder1.setPositiveButton("Close", (dialog, which) -> dialog.dismiss());
+
+            AlertDialog alertDialog1 = builder1.create();
+            alertDialog1.show();
+        });
+
+        Button btn_howDeleteField = inflatedLayout.findViewById(R.id.btndeletefield);
+        btn_howDeleteField.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 alertDialog.dismiss();
-                LayoutInflater inflater = LayoutInflater.from(MainActivity.this);
-                View inflatedLayout = inflater.inflate(R.layout.add_field_help_layout, null);
+                LayoutInflater inflater1 = LayoutInflater.from(MainActivity.this);
+                View inflatedLayout1 = inflater1.inflate(R.layout.delete_field_help_layout, null);
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setView(inflatedLayout);
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+                builder1.setView(inflatedLayout1);
 
-                builder.setPositiveButton("Close", (dialog, which) -> dialog.dismiss());
+                builder1.setPositiveButton("Close", (dialog, which) -> dialog.dismiss());
 
-                AlertDialog alertDialog = builder.create();
-                alertDialog.show();
+                AlertDialog alertDialog1 = builder1.create();
+                alertDialog1.show();
             }
         });
     }
@@ -86,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         builder.setTitle("About")
-                .setMessage("Description: This app is for the development of the research application made by the students of the PRMSU in partially fulfillment of Bachelor Science in Computer Science\n\n\n" +
+                .setMessage("Description: This app is for the development of the research application made by the students of the President Ramon Magsaysay State University in partially fulfillment of Bachelor Science in Computer Science\n\n\n" +
                         "Email:hunsendrake@gmail.com\n" +
                         "Contact info:09065904571\n\n\n" +
                         "v 1.0")
