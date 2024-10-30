@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:id="@+id/ll_result"
     android:padding="8dp"
     tools:context=".Result">
@@ -17,5 +18,103 @@
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/varelaregular"
+            android:layout_height="wrap_content"
+            android:text="Nitrogen Level: "/>
+
+        <TextView
+            android:id="@+id/tvw_nitrogenLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/varelaregular"
+            android:text="Normal/Slight/Severe"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/varelaregular"
+            android:layout_height="wrap_content"
+            android:text="DGCI Ave: "/>
+
+        <TextView
+            android:id="@+id/tvw_dgciAve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/varelaregular"
+            android:text="0.000"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:fontFamily="@font/varelaregular"
+        android:text="Recommendations"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/varelaregular"
+            android:layout_height="wrap_content"
+            android:text="Fertilizer Amount: "/>
+
+        <TextView
+            android:id="@+id/tvw_fertilizerAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/varelaregular"
+            android:text="50kg/ha"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginVertical="16dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAddField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/smoothcorner"
+            android:backgroundTint="#2E7D32"
+            android:fontFamily="@font/varelaregular"
+            android:padding="20dp"
+            android:text="@string/back_to_field"
+            android:textColor="@color/white"/>
+    </LinearLayout>
 
 </LinearLayout>

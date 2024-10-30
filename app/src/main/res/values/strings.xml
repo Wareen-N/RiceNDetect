@@ -42,6 +42,7 @@
     <string name="_1st_leaf">1st leaf</string>
     <string name="history">History</string>
     <string name="click_to_the_boxes_to_upload_a_picture">*click to the boxes to upload a picture</string>
+    <string name="back_to_field">Back to Field</string>
 
     <string-array name="unitArea">
         <item>sqm</item>
