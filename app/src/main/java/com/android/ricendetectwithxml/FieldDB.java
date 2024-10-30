@@ -103,5 +103,4 @@ public class FieldDB extends SQLiteOpenHelper {
         }
         return cursor;
     }
-
 }

@@ -10,6 +10,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -34,6 +35,8 @@ public class NitrogenIdentifierLayout extends AppCompatActivity {
             R.id.seventhPic, R.id.eightPic, R.id.ninthPic,
             R.id.tenthPic, R.id.eleventhPic, R.id.twelftPic
     };
+
+    private ArrayList<Bitmap> imagesToClassify;
     private Spinner spin_fieldUnitArea, spin_areaValue;
     private TextView txt_DATOrDASDate;
     private TextView txt_fertilizerApplicationDate;
@@ -107,6 +110,10 @@ public class NitrogenIdentifierLayout extends AppCompatActivity {
         startActivityForResult(intent, PICK_IMAGE);
     }
 
+    private void classifyImage(Bitmap bitmap){
+
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -115,6 +122,8 @@ public class NitrogenIdentifierLayout extends AppCompatActivity {
             Uri imageUri = data.getData();
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
+                int dimension = Math.min(bitmap.getWidth(), bitmap.getHeight());
+                bitmap = ThumbnailUtils.extractThumbnail(bitmap, dimension, dimension);
                 imgv_currentImageView.setImageBitmap(bitmap);
             } catch (Exception e) {
                 e.printStackTrace();
