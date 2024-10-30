@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,7 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class FieldCustomAdapter extends RecyclerView.Adapter<FieldCustomAdapter.MyViewHolder>{
+public class FieldCustomAdapter extends RecyclerView.Adapter<FieldCustomAdapter.FieldViewHolder>{
     private Context context;
     private ArrayList<String> fieldId, fieldName, fieldUnitArea, fieldAreaValue, fieldDasDat, fieldLastDateFertilizer;
     private Button btn_editField, btn_deleteField, btn_editConfirm;
@@ -53,14 +52,14 @@ public class FieldCustomAdapter extends RecyclerView.Adapter<FieldCustomAdapter.
 
     @NonNull
     @Override
-    public FieldCustomAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public FieldViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.activity_field_card_design, parent, false);
-        return new MyViewHolder(view);
+        return new FieldViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FieldCustomAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull FieldViewHolder holder, int position) {
         holder.txt_fieldId.setText(String.valueOf(fieldId.get(position)));
         holder.txt_fieldName.setText(String.valueOf(fieldName.get(position)));
         holder.txt_fieldUnitArea.setText(String.valueOf(fieldUnitArea.get(position)));
@@ -112,10 +111,10 @@ public class FieldCustomAdapter extends RecyclerView.Adapter<FieldCustomAdapter.
         return fieldId.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public class FieldViewHolder extends RecyclerView.ViewHolder {
         TextView txt_fieldId, txt_fieldName, txt_fieldUnitArea, txt_fieldAreaValue, txt_fieldDasDat, txt_fieldLastDateFertilizer;
         CardView cvw_fieldCardView;
-        public MyViewHolder(@NonNull View itemView) {
+        public FieldViewHolder(@NonNull View itemView) {
             super(itemView);
             cvw_fieldCardView = itemView.findViewById(R.id.fieldCardView);
             txt_fieldId = itemView.findViewById(R.id.disp_fieldId);

@@ -29,7 +29,7 @@
             android:name=".Result"
             android:exported="false" />
         <activity
-            android:name=".identify"
+            android:name=".NitrogenIdentifier"
             android:exported="false" />
         <activity
             android:name=".FieldActivity"
